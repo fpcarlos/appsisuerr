@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Sistema teste</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                    <ui:insert name="header">Header</ui:insert>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    <ui:insert name="footer">Footer</ui:insert>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="175" header="Esconder" collapsible="true">
+                    <p:menu>
+                        <p:submenu label="Opções">
+                            <p:menuitem value="Dados Pessoais" url="#" />
+                            <p:menuitem value="Novas Inscrições" url="#" />
+                            <p:menuitem value="Acompanhamento" url="#" />
+                            <p:menuitem value="Requerimento" url="#" />
+                        </p:submenu>
+                    </p:menu>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center">
+                     <h:form id="formTemplet">
+                        <p:confirmDialog global="true" showEffect="fade">
+                            <p:commandButton value="Sim" type="button"
+                                             styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+                            <p:commandButton value="Não" type="button"
+                                             styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+                        </p:confirmDialog>
+                    </h:form>
+                    <ui:insert name="content">Content</ui:insert>
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+</html>
+

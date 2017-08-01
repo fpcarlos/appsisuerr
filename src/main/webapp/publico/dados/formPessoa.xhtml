@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/template/template.xhtml">
+
+    <ui:define name="content">
+        <h:head>
+
+        </h:head>
+        <h1 class="aw-page-title">Dados Pessoais</h1>
+
+        <h:form id="frm">
+            <p:toolbar>
+                <p:toolbarGroup>
+                    <p:commandButton value="Salvar" update="frm"
+                                     actionListener="#{pessoaVisao.salvar()}" icon="ui-icon-disk" />
+                </p:toolbarGroup>
+            </p:toolbar>
+            <div class="ui-fluid">
+                <p:messages id="msgid"></p:messages>
+                <p:panelGrid columns="4" layout="grid"
+                             columnClasses="ui-grid-col-2, ui-grid-col-4, ui-grid-col-2, ui-grid-col-4"
+                             styleClass="panelgrid-noborder">
+
+                    <p:outputLabel value="Nome" for="nome" />
+                    <p:inputText id="nome" value="#{pessoaVisao.pessoa.nome}" required="true" 
+                                 requiredMessage="Nome Obrigatório" placeholder="Nome" />                                                        
+                    <p:outputLabel value="Nome Social" for="nomeSocial" />
+                    <p:inputText id="nomeSocial" value="#{pessoaVisao.pessoa.nomeSocial}" placeholder="Nome Social Opcional" />
+
+                    <p:outputLabel value="Data de Nascimento" for="dataNascimento"/>
+                    <p:calendar id="dataNascimento" value="#{pessoaVisao.pessoa.dataNascimento}" showOn="button" locale="pt_BR" pattern="dd/MM/yyyy" rendered="true" requiredMessage="Data de Nascimento é obrigatório!!!" placeholder="Data de Nascimento"/>
+
+                    <p:outputLabel value="Sexo" for="sexo"/>
+                    <p:selectOneMenu id="sexo" value="#{pessoaVisao.pessoa.sexo}" required="true" requiredMessage="Sexo não selecionado!" placeholder="Selecione" >
+                        <f:selectItem itemLabel="Selecione" itemValue=""/>
+                        <f:selectItem itemLabel="Masculino" itemValue="M" />
+                        <f:selectItem itemLabel="Ferminino" itemValue="F" />
+                    </p:selectOneMenu>  
+
+                    <p:outputLabel value="Escolariade" for="escolaridade"/>
+                    <p:selectOneMenu id="escolaridade" value="#{pessoaVisao.pessoa.escolaridade}" converter="converterPadrao">
+
+                        <f:selectItems value="#{sistemaVisao.tipoEscolaridadeList}"
+                                       var="varTE"
+                                       itemValue="#{varTE}"
+                                       />
+                    </p:selectOneMenu>
+
+                    <p:outputLabel value="E-Mail" for="email"/>
+                    <p:inputText id="email" value="#{pessoaVisao.pessoa.email}" placeholder="Endereço de e-Mail"/>
+
+                    <p:outputLabel value="Nome Pai" for="nomePai" />
+                    <p:inputText id="nomePai" value="#{pessoaVisao.pessoa.nomePai}" placeholder="Nome do Pai" size="100" />
+
+                    <p:outputLabel value="Nome Mãe" for="nomeMae" />
+                    <p:inputText id="nomeMae" value="#{pessoaVisao.pessoa.nomeMae}" placeholder="Nome da Mãe" size="100" />
+
+                    <p:outputLabel value="CPF" for="cpf" />
+                    <p:inputMask id="cpf" value="#{pessoaVisao.pessoa.cpf}" required="true" mask="999.999.999-99"
+                                 style="width: 70%" placeholder="CPF" requiredMessage="CPF Obrigatório!!" />
+
+                    <p:outputLabel value="RG" for="rg" />
+                    <p:inputText id="rg" value="#{pessoaVisao.pessoa.rg}" required="true" 
+                                 style="width: 70%" placeholder="RG" requiredMessage="RG Obrigatório!!" />
+
+                    <p:outputLabel value="Telefone" for="telefone" />
+                    <p:inputMask id="telefone" value="#{pessoaVisao.pessoa.telefone}" placeholder="Telefone para contato"
+                                 mask="(99)9999-9999"/>
+
+                    <p:outputLabel value="Celular" for="celular" />
+                    <p:inputMask id="celular" value="#{pessoaVisao.pessoa.celular}" placeholder="Número Celular" 
+                                 mask="(99)9999-9999"/>
+                    <p:outputLabel value="CEP" for="cep" />
+                    <p:inputText id="cep" required="true" value="#{pessoaVisao.pessoa.cep}" placeholder="Endereço" requiredMessage="Endereço bbrigatório!!" >
+
+                    </p:inputText>
+
+                    <p:outputLabel value="Logradouro" for="logradouro" />
+                    <p:inputText id="logradouro" required="true" value="#{pessoaVisao.pessoa.logradouro}" placeholder="Endereço" requiredMessage="Endereço bbrigatório!!" />
+
+                    <p:outputLabel value="Número" for="numero" />
+                    <p:inputText id="numero" required="true" value="#{pessoaVisao.pessoa.numero}" requiredMessage="Número da Residẽncia é obrigatório!!" placeholder="Número da Casa/Apto"/>
+
+                    <p:outputLabel value="Bairro" for="bairro" />
+                    <p:inputText id="bairro" value="#{pessoaVisao.pessoa.bairro}" placeholder="Bairro"/>
+
+                    <p:outputLabel value="Cidade" for="cidade" />
+                    <p:inputText id="cidade" value="#{pessoaVisao.pessoa.cidade}" placeholder="Cidade" required="true" requiredMessage="Cidade Obrigatório!!" />
+
+                    <p:outputLabel value="UF" for="uf" />
+                    <p:inputText id="uf" value="#{pessoaVisao.pessoa.uf}" placeholder="UF" required="true" requiredMessage="UF Obrigatório!!"  />
+                    <p:outputLabel/>
+                </p:panelGrid>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,373 @@
+/*
+** Atenção: Usar apenas cores e imagens em background
+**
+*/ 
+
+body {
+    background: #000 !important;/*url(images/background.png);*/
+    color: #fff !important;
+
+}
+
+.barra {
+    background: #222 !important;
+    border-bottom: 1px solid #fff !important;
+}
+
+.barra-interna {
+    background: #222 !important;
+}
+
+.redes_topo {
+    display: none;
+}
+.redes_topo_branco {
+    display: block;
+}
+.redes_topo_branco ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.redes_topo_branco ul li {
+    float: right;
+    display: inline;
+    margin: 7px 0 0 0 !important;
+    padding: 0;
+    list-style: none;
+}
+/* Primeiro Nível - Menu topo */
+
+.redes_topo_branco ul li a {
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+.menu_topo_branco .redes_topo_branco img{    
+}
+
+.redes_topo_branco img:hover{
+    opacity: 0.85;
+
+}
+
+
+.uerr_home img {
+	display: none;
+}
+
+.uerr_home_branco img:hover {
+    opacity: 0.85;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.uerr_home_branco img {
+    display: block;
+}
+
+
+.menu_topo ul {
+    float: left;
+    min-width: 160px;
+    padding: 0 !important;
+    margin: -23px 0 0 190px;
+}
+
+.menu_topo ul li a {
+    color: #fff;
+
+}
+
+.menu_topo ul li:hover{
+    color: #ffef00;
+    border-top: 3px solid #ffef00;
+}
+
+.menu_topo ul li a:hover{
+    color: #ffef00;
+    text-decoration: none;
+}
+
+
+.uerr_home img {
+
+}
+
+.uerr_home img:hover {
+    background: none !important;
+}
+
+
+/* Menu Acessibilidade
+----------------------------*/
+.acessibilidade {
+    background: #000 !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+}
+
+.menu-acessibilidade ul li {
+    color: #fff !important;
+}
+.menu-acessibilidade ul li a {
+    color: #fff !important;
+}
+
+.menu-acessibilidade ul li a:hover {
+    color: #ffef00 !important;
+}
+
+#wrapper {
+  background: #000 !important;
+  color: #fff !important;
+
+}
+
+
+/* =HEADER
+-------------------------------------------------------------- */
+
+#header-fundo {
+   border-bottom: 1px solid #fff !important;
+   background: #222 !important;
+}
+#header {
+    background: #222;
+    border-bottom: 1px solid #fff !important;
+}
+
+.logo{
+	display: none;
+
+}
+
+.logo-branco {
+	display: block;
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+
+.logo-branco h1.site_title {
+    margin: 0 10px 0 20px;
+    padding:;
+    font-family: "Arial Black", Helvetica, Sans-serif;
+    font-size:31px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.logo-branco h1.site_title a, .logo h1.site_title a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.logo-branco h2.site_description {
+    margin: 0;
+    padding:0;
+    color: #404040;
+    font-family: Arial, Helvetica, Sans-serif;
+    font-size:14px;
+    line-height: 14px;
+}
+
+/* Menu Primary
+----------------------------*/
+
+.menu-primary-container {
+    background: #222;
+    height: 52px;
+    border: 1px solid #fff;
+}
+
+.menu-primary {
+    background: #222;
+}
+
+.menu-primary ul {
+	min-width: 160px;
+}
+/* First Level - Menu Primary */
+
+.menu-primary li a {
+    color: #fff;
+    background: #222;
+    border-bottom: 1px solid #fff;
+}
+
+
+.menu-primary li a:hover, .menu-primary li a:active, .menu-primary li a:focus, 
+.menu-primary li:hover > a, .menu-primary li.current-cat > a, .menu-primary li.current_page_item > a, .menu-primary li.current-menu-item > a {
+    color: #ffef00 !important;
+    background: #000;
+    border-bottom: 1px solid #fff;
+}
+
+/* Child Levels - Menu Primary */
+
+.menu-primary li li a {
+	color: #fff;
+    background: #222;
+}
+
+.menu-primary li li a:hover, .menu-primary li li a:active, .menu-primary li li a:focus, 
+.menu-primary li li:hover > a, .menu-primary li li.current-cat > a, .menu-primary li li.current_page_item > a, .menu-primary li li.current-menu-item > a {
+	color: #fff;
+    background: #000;
+}
+
+#main {
+    background: #000;
+    margin-top: 6px;
+}
+
+#content .alignleft a {
+    color: #ffef00;
+}
+
+.seg-menu ul {
+    width: 220px;
+    min-width: 160px;
+    padding: 0;
+}
+
+.seg-menu ul li {
+	color: #fff;
+    padding: 16px 5px 16px 10px;
+    margin: 0 0 2px 0;
+    background: #222;
+    border: 1px solid #fff;
+}
+
+.seg-menu ul li a {
+    color: #fff;
+}
+
+.seg-menu ul li a:hover {
+    color: #ffef00 !important;
+}
+
+.seg-menu span:hover {
+    background-image: url(/wp-content/themes/uerr/images/seta-amarela.png);
+}
+
+.title a span{
+    color: yellow;
+}
+
+.title {
+    color: #fff;
+}
+
+.title a {
+    color: #fff;
+}
+.title a:hover {
+	color: yellow;
+}
+
+.widgettitle, .widgettitle a, .widgettitle a:hover {
+    color: #fff;
+}
+
+
+/* =FOOTER
+-------------------------------------------------------------- */
+.topo-footer {
+	background: #222;
+	color: #fff;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+#footer-widgets-container {
+    background: #000;
+    color: #fff;
+}
+
+#footer-widgets .widget-container a {
+	color: #fff;
+}
+
+#footer-widgets .widget-container a:hover {
+	    color: yellow;
+
+}
+
+/* Menu Secondary */
+
+.menu-secondary-container {
+    background: #222;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+
+.menu-secondary li a {
+	padding: 19px 20px;
+    color: #fff;
+
+}
+
+.menu-secondary li a:hover, .menu-secondary li a:active, .menu-secondary li a:focus, 
+.menu-secondary li:hover > a, .menu-secondary li.current-cat > a, .menu-secondary li.current_page_item > a, .menu-secondary li.current-menu-item > a {
+    color: #ffef00 !important;
+    background: #000;
+}
+
+#footer {
+    color: #fff;
+}
+
+#cb_contact_form {
+	color: #fff !important;
+
+}
+#copyrights {
+    color: #fff;
+    background: #000;
+}
+
+#credits {
+    color: #000;
+}
+
+#credits a {
+    color: #000;
+} 
+
+#credits a:hover {
+    color: #000;
+}
+/*	#Media Queries
+**	--------------
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 768px) {
+
+    
+    .logo, .header-right {
+        float: right;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+    .logo-branco, .header-right {
+        float: right;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .seg-menu ul li:hover {
+        list-style: none;
+        padding: 20px 5px 20px 10px;
+        margin: 0 0 4px 0;
+    }
